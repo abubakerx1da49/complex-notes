@@ -53,8 +53,11 @@ const Home: React.FC = () => {
   };
 
   const handleDelete = (id: number) => {
-    setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
-    setEditingNoteId(null);
+    if (confirm(`Do you want to delete this Note - ${id}`)) {
+      setNotes((prevNotes) => prevNotes.filter((note) => note.id !== id));
+      setEditingNoteId(null);
+    } else {
+    }
   };
 
   // Update local storage whenever tasks state changes
