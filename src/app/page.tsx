@@ -93,7 +93,7 @@ const Home: React.FC = () => {
           {notes.map((note) => (
             <Card key={note.id} className='mb-2'>
               <div className='p-4 flex items-start justify-between space-x-2'>
-                <div className='overflow-auto w-full prose prose-invert prose-img:rounded-xl' dangerouslySetInnerHTML={{ __html: note.htmlContent }}></div>
+                <div className='overflow-auto w-full prose prose-invert prose-hr:mt-0 prose-hr:mb-6 prose-img:rounded-xl' dangerouslySetInnerHTML={{ __html: note.htmlContent }}></div>
                 <div className='flex items-center justify-center flex-col space-y-2'>
                   <Button color='warning' isIconOnly onClick={() => handleEdit(note.id)}>
                     <Pencil2Icon />
